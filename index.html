@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <title>Age Calculator </title>
+</head>
+<body>
+    <script src="main.js" defer></script>
+    
+    <main>
+        <form id="form_date">
+            <div class="day">
+                <strong> DAY</strong>
+                <input required type="number" placeholder="DD" name="" id="" min="1" max="31">
+            </div>
+
+            <div class="month">
+                <strong> MONTH</strong>
+                <input required type="number" placeholder="MM" name="" id="" min="1" max="12">
+            </div>
+
+            <div class="year">
+                <strong> YEAR</strong>
+                <input required type="number" placeholder="YYYY" name="" id="" min="" type="">
+            </div>
+
+        </form>
+<!-- with form-->
+<div class="waring"></div>
+
+<div class="divResult">
+
+    <div class="divLine">
+        <hr>
+        <button type="submit" class="submit" form="form_date">        
+            <img src="./assets/images/icon-arrow.svg" alt="" title="Img with background purple">
+        </button>
+        
+    </div>
+
+    <!--Code created with div in field of date of time, but i will creat again with form
+    <div class="divResult">
+      <header>
+            <div class="day">
+                <strong> DAY</strong>
+                <input required type="number" placeholder="DD" name="" id="">
+            </div>
+            <div class="month">
+                <strong> MONTH</strong>
+                <input required type="number" placeholder="MM" name="" id="">
+            </div>
+            <div class="year">
+                <strong> YEAR</strong>
+                <input required type="number" placeholder="YYYY" name="" id="">
+            </div>
+        </header>
+-->
+    
+        <div>  
+            <h1 class="h1Years">--</h1> 
+            <h1 class="h1Date">years</h1>
+        </div>
+       
+        <div> 
+            <h1 class="h1Months">--</h1> 
+            <h1 class="h1Date">months</h1>
+        </div>
+        
+        <div> 
+            <h1 class="h1Days">--</h1> 
+            <h1 class="h1Date">days</h1>
+
+        </div>
+        
+    </div>
+
+    </main>
+    
+</body>
+</html>
