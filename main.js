@@ -51,6 +51,8 @@ form.addEventListener("submit", (event) => {
         let dia = Math.floor(differenceDates / 60 /60 / 24) 
         console.log("dia" +dia)
 
+
+        
     }
 
     
