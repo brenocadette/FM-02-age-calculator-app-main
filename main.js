@@ -48,8 +48,28 @@ form.addEventListener("submit", (event) => {
         let hour = Math.floor(differenceDates / 60 /60 % 24) 
         console.log("hour"+ hour)
 
-        let dia = Math.floor(differenceDates / 60 /60 / 24) 
+        let dia = Math.floor(differenceDates / 60 /60 / 24 % 30) 
         console.log("dia" +dia)
+
+        let months = Math.floor(differenceDates/ 60/ 60/ 24/ 30 %12)
+        console.log("months" +months)
+
+        let years = Math.floor(differenceDates / 60/ 60/ 24 /30 /12)
+        console.log("years" +years)
+        
+        //writing data in screen
+
+        const dateUpdate = document.querySelectorAll(".dateUpdate")
+        console.log(dateUpdate) //ok
+        //Criando array com a data segunds, minute, hour, dia
+        let arrayDateFull = [years, months, dia, hour, minute, secunds]
+        console.log(dateUpdate[0].textContent)
+
+            dateUpdate.forEach( (elemento, i) => elemento.textContent = arrayDateFull[i]
+
+                )
+        
+       
 
 
         
