@@ -28,9 +28,8 @@ form.addEventListener("submit", (event) => {
         waringDiv.style.display = "block"
         console.log("Insira uma data no furuto")
         event.preventDefault(); // cancel page update
-
-        
     }
+
     else   {
         event.preventDefault(); // cancel page update
 
@@ -63,18 +62,59 @@ form.addEventListener("submit", (event) => {
         console.log(dateUpdate) //ok
         //Criando array com a data segunds, minute, hour, dia
         let arrayDateFull = [years, months, dia, hour, minute, secunds]
-        console.log(dateUpdate[0].textContent)
-
-            dateUpdate.forEach( (elemento, i) => elemento.textContent = arrayDateFull[i]
-
-                )
-        
-       
-
+        console.log("entrou" + dateUpdate[0].textContent)
 
         
+
+
+setInterval( function() {   
+
+    if(secunds == 0) {
+        secunds = 60
+        minute--
     }
-
+    if(minute == 0) {
+        minute = 60
+        hour--
+    }
+    if (hour == 0){
+        hour=24
+        dia--
+    }
+    if(dia ==0) {
+        dia =30
+        months--
+    }
+    if(months ==0){
+        months =365
+        years--
+    }
+    secunds--
     
+    arrayDateFull = [years, months, dia, hour, minute, secunds]
+
+      
+dateUpdate.forEach( (elemento, i) => elemento.textContent = arrayDateFull[i] )
+
+}, 1000)
+  
+
+
+            
+           
+
+}
+
 })
 
+/*
+
+s 10 01 00 60 00 60 00 60
+m 10 10 10 09 00 60 00 60
+h 10 10 10 10 02 01 00 24
+d 10 10 10 10 10 10 02
+m 10 10 10 10 10 10 10
+a 10 10 10 10 10 10 10
+
+
+*/
